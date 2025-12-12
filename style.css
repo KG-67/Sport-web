@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
 * {
   margin: 0;
   padding: 0;
@@ -56,19 +58,23 @@ body {
   justify-content: space-between;
   padding: 20px 80px;
   background: #e3e6f3;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06)
-  z-index;                                                   /* should be z-index: 999; */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999;                                                  /* should be z-index: 999; */
   position: sticky;
   top: 0;
   left: 0;
 
 }
 
-#navbar{
+#navbar {
   display: flex;
   align-items: center;
   justify-content: center;
 
+}
+
+#navbar {
+  background: yellow;
 }
 
 #navbar li {
@@ -77,21 +83,27 @@ body {
   position: relative;
 }
 
+#navbar li a {
+  text-decoration: none !important;
+}
+
 #navbar li a{
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
   color: #1a1a1a;
-  transition: 0.3s ease;
-
+  position: relative;
 }
+
+
 
 #navbar li a:hover,
 #navbar li a.active {
   color: #088178;
 }
 
-#navbar li a.active::after
+ 
+#navbar li a.active::after,
 #navbar li a:hover ::after {
   content: "";
   width: 30%;
@@ -100,7 +112,7 @@ body {
   position: absolute;
   bottom: -4px;
   left: 20px;
-}
+} 
 
 /* Home page */
 #hero{
