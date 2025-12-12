@@ -71,13 +71,13 @@ body {
 
 }
 
-#navbar li{
+#navbar li {
   list-style: none;
   padding: 0 20px;
   position: relative;
 }
 
-#navbar li{
+#navbar li a{
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
