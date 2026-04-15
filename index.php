@@ -1,11 +1,443 @@
-<?php
-	if (!empty($_SERVER['HTTPS']) && ('on' == $_SERVER['HTTPS'])) {
-		$uri = 'https://';
-	} else {
-		$uri = 'http://';
-	}
-	$uri .= $_SERVER['HTTP_HOST'];
-	header('Location: '.$uri.'/dashboard/');
-	exit;
-?>
-Something is wrong with the XAMPP installation :-(
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> PeakSportswear Project </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+      
+    <section id="header">
+        <a href="#"> <img src="img/logo.png" class="logo" alt=""></a> 
+
+        <div> 
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <div id = "mobile">
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="hero">
+        <h4>New deals</h4>
+        <h2>Super value deals</h2>
+        <h1>On all products</h1>
+        <p>Save with new Winter Deals</p>
+        <a href="shop.html"><button>Shop Now</button></a>
+    </section>
+
+<section id="feature" class="section-p1">
+    <div class="fe-box">
+        <img src="img/truck.png" alt="">
+        <h6>Free Shipping</h6>
+    </div>
+        <div class="fe-box">
+        <img src="img/Icon2.png" alt="">
+        <h6>Quick Delivery</h6>
+    </div>
+        <div class="fe-box">
+        <img src="img/Icon3.jpg" alt="">
+        <h6>Save Money</h6>
+    </div>
+        <div class="fe-box">
+        <img src="img/Icon4.2.jpg" alt="">
+        <h6>Great Deals</h6>
+    </div>
+        <div class="fe-box">
+        <img src="img/Icon5.jpg" alt="">
+        <h6>Professional Sales</h6>
+    </div>
+        <div class="fe-box">
+        <img src="img/Icon6.1.jpg" alt="">
+        <h6>Excellent Customer Service</h6>
+ </section>
+ 
+     <section id="product1" class="section-p1">
+        <h2>Featured Products</h2>
+        <p>Winter Collection</p>
+        <div class="pro-container">
+            <div class="pro">
+             <img src="img/products/I1.avif" alt="">
+             <div class="des">
+                <span>Peak Original</span>
+                <h5>Winter Black Jacket</h5>
+                <div class="star">
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="far fa-star"></i> 
+                </div>
+                <h4>£14.99</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/I2.avif" alt="">
+            <div class="des">
+                <span>Peak Original</span>
+                <h5>Mens Workout Tracksuit</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <h4>£24.99</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/I3.avif" alt="">
+            <div class="des">
+                <span>Peak Original</span>
+                <h5>Womens Tracksuit Set</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>£24.99</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/I4.avif" alt="">
+            <div class="des">
+                <span>Peak Original</span>
+                <h5>Womens Fleece</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <h4>£14.99</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/I5.1.avif" alt="">
+            <div class="des">
+                <span>Nike</span>
+                <h5>Nike Academy Gloves</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>£27.99</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/I8.avif" alt="">
+            <div class="des">
+                <span>Nike</span>
+                <h5>Nike Swift Womens Running Top</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>£37.99</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/I6.avif" alt="">
+            <div class="des">
+                <span>Nike</span>
+                <h5>Running Jacket</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>£49.99</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/I7.avif" alt="">
+            <div class="des">
+                <span>Nike</span>
+                <h5>Nike Challenger Shorts</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <h4>£34.99</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+   </div>
+</section>
+
+<section id="banner" class="section-m1">
+    <h4>Fast Services</h4>
+    <h2>Up to <span>20% Off</span> - All Clothes and Accessories</h2>
+    <button class="normal">Explore More</button>
+</section>
+
+  <section id="product1" class="section-p1">
+        <h2>Most Popular Products</h2>
+        <p>Customer favourites</p>
+        <div class="pro-container">
+            <div class="pro">
+             <img src="img/products/I1.avif" alt="">
+             <div class="des">
+                <span>Peak Original</span>
+                <h5>Winter Black Jacket</h5>
+                <div class="star">
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="far fa-star"></i> 
+                </div>
+                <h4>£14.99</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/I2.avif" alt="">
+            <div class="des">
+                <span>Peak Original</span>
+                <h5>Mens Workout Tracksuit</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>£9.99</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/I3.avif" alt="">
+            <div class="des">
+                <span>Peak Original</span>
+                <h5>Womens Tracksuit Set</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>£24.99</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/I4.avif" alt="">
+            <div class="des">
+                <span>Peak Original</span>
+                <h5>Womens Fleece</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <h4>£14.99</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/I5.1.avif" alt="">
+            <div class="des">
+                <span>Nike</span>
+                <h5>Nike Academy Gloves</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>£27.99</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/I8.avif" alt="">
+            <div class="des">
+                <span>Nike</span>
+                <h5>Nike Swift Womens Running Top</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>£37.99</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/I6.avif" alt="">
+            <div class="des">
+                <span>Nike</span>
+                <h5>Running Jacket</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>£49.99</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/I7.avif" alt="">
+            <div class="des">
+                <span>Nike</span>
+                <h5>Nike Challenger Shorts</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <h4>£34.99</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+   </div>
+</section>
+
+   <section id="sm-banner" class="section-p1">
+        <div class="banner-box">
+            <h4>Affordable Prices</h4>
+            <h2>High value products</h2>
+            <span>The best sport products available at PeakSportswear</span>
+            <a href="shop.html"><button class="white">Learn More</button></a>
+        </div>
+        <div class="banner-box2">
+            <h4>Winter collection</h4>
+            <h2>New unique styles</h2>
+            <span>The best sport products available at PeakSportswear</span>
+            <a href="shop.html"><button class = "white">See more</button></a>
+        </div>
+    </section>
+
+    <section id = "banner3">
+        <div class="banner-box">
+            <h2>WINTER SALE</h2>
+            <h3>Winter Collection -Up to 20% off</h3>   
+        </div>
+        <div class="banner-box3">
+            <h2>NEW ACCESSORIES</h2>
+            <h3>Winter Collection 2025/2026</h3>   
+        </div>
+        <div class="banner-box4">
+            <h2>RUNNING GEAR</h2>
+            <h3>Highest Quality</h3>   
+        </div>          
+    </section>
+
+    <section id = "newsletter" class="section-p1 section-m1" >
+        <div class="newstext">
+            <h4>Sign Up For Our Newsletter Now</h4>
+            <p>Get Emails about any <span>new deals or items</span> added to our store</p>
+        </div>
+        <div class="form">
+         <input type="text" placeholder="Your Email Address">
+         <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo.png" alt="">
+            <h4>Contact</h4>
+            <p> <strong>Address:</strong> Sanditon Way, Worthing BN14 9FD </p>
+            <p><strong>Phone:</strong> +01903 275755</p>
+            <p><strong>Hours:</strong> 9:00 - 17:00, Monday - Friday</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track my Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateway</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+
+        <div class="copyright">
+            <p>@ 2026, Keaton Gilmore's AQA NEA Project</p>
+        </div>
+    </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

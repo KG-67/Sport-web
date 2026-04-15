@@ -1055,6 +1055,149 @@ footer .copyright{
     font-weight: 700;
 }
 
+/* Login */
+
+#signIn {
+    display: none;
+}
+
+body.login-page{
+  background-color: #c9d6ff;
+}
+
+.container {
+    width: 400px;
+    margin: 60px auto;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-3px);
+}
+
+
+.form-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+
+.input-group {
+    position: relative;
+    margin: 20px 0;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #555;
+    pointer-events: none;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 12px 12px 45px; /* space for icon */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.input-group input:focus {
+    border-color: #088178;
+    box-shadow: 0 0 5px rgba(8,129,120,0.3);
+}
+
+
+.btn, 
+#signInButton, 
+#signUpButton {
+    width: 100%;
+    padding: 12px;
+    background: #088178;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s ease;
+}
+
+.btn:hover,
+#signInButton:hover,
+#signUpButton:hover {
+    background: #066b63;
+}
+
+
+.or {
+    text-align: center;
+    margin: 20px 0;
+    color: #777;
+}
+
+
+.icons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.icons i {
+    font-size: 28px;
+    margin: 0 10px;
+    cursor: pointer;
+    color: #555;
+    transition: 0.3s ease;
+}
+
+.icons i:hover {
+    color: #088178;
+}
+
+
+.links {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.links p {
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.links button {
+    background: transparent;
+    border: none;
+    color: #088178;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.links button:hover {
+    text-decoration: underline;
+}
+
+/* Recover password */
+.recover a {
+    color: #088178;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.recover a:hover {
+    text-decoration: underline;
+}
+
 
 
 
