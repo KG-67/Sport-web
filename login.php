@@ -1,3 +1,29 @@
+<?php
+session_start();
+include 'connect.php';
+
+if (isset($_POST['signIn'])) {
+
+    $email    = $_POST['email'];
+    $password = md5($_POST['password']);
+
+    $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+
+        $row = $result->fetch_assoc();
+        $_SESSION['email'] = $row['email'];
+
+        header("Location: index.php");
+        exit();
+
+    } else {
+        echo "Incorrect Email or Password";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en"> 
 
@@ -10,19 +36,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+
+
 <body class="login-page">
+
       
     <section id="header">
         <a href="#"> <img src="img/logo.png" class="logo" alt=""></a> 
 
         <div> 
             <ul id="navbar">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a class="active" href="blog.html">Blog</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a class="active" href="login.php">Login</a></li>
                 <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
                 <a href="#" id="close"><i class="far fa-times"></i></a>
             </ul>
@@ -55,10 +84,10 @@
             </div>
             <div class="input-group">
                 <i class="fa-solid fa-lock"></i>
-                <input type="password" id="password" placeholder="Password" required>
+                <input type="password" name ="password" id="password" placeholder="Password" required>
                 <label for="password"></label>
             </div>
-            <input type="submit" class="btn" value="Sign Up" name="signup">
+            <input type="submit" class="btn" value="Sign Up" name="signUp">
             
 
         </form>
@@ -78,7 +107,7 @@
 
      <div id ="signIn" class="container">
         <h1 class="form-title">Sign In</h1>
-        <form method ="post" action="register.php">
+        <form method ="post" action="login.php">
           
             <div class="input-group">
                 <i class="fa-regular fa-envelope"></i>
@@ -87,7 +116,7 @@
             </div>
             <div class="input-group">
                 <i class="fa-solid fa-lock"></i>
-                <input type="password" id="password" placeholder="Password" required>
+                <input type="password" name="password" id="password" placeholder="Password" required>
                 <label for="password"></label>
             </div>
             <p class="recover">

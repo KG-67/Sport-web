@@ -1,50 +1,33 @@
-<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
+<?php
+session_start();
 include 'connect.php';
 
-if(isset($_POST['signUp'])){
-    $firstName=$_POST['fName'];
-    $lastName=$_POST['lName'];
-    $email=$_POST['email'];
-    $password=$_POST['password'];
-    $password=md5($password);
+if (isset($_POST['signUp'])) {
 
-    $checkEmail="SELECT * From users where email='$email'";
-    $result=$conn->query($checkEmail);
-    if ($result->num_row>0){
+    $firstName = $_POST['fName'];
+    $lastName  = $_POST['lName'];
+    $email     = $_POST['email'];
+    $password  = md5($_POST['password']);
+
+    $checkEmail = "SELECT * FROM users WHERE email='$email'";
+    $result = $conn->query($checkEmail);
+
+    if ($result->num_rows > 0) {
         echo "Email Address Already Exists";
-    }
-    else{
-        $insertquery="INSERT INTO users(firstName,lastName,email,password)";
-                       VALUES ('$firstName','$lastName', '$email','$password');
-            if($conn->query($insertQuery)==TRUE){
-                header("location: login.php");
-            }
-            else{
-                echo "Error:" . $conn->error;
-            }           
+    } else {
 
-    }
-    
-}
+        $insertQuery = "INSERT INTO users(firstName, lastName, email, password)
+                        VALUES ('$firstName', '$lastName', '$email', '$password')";
 
-if(isset($_POST['signIn'])){
-    $email=$_POST['email'];
-    $password=$_POST['password'];
-    $password=md5($password);
-
-    $sql="SELECT * FROM users WHERE email='$email' and passwords='$password'";
-    $result=$conn->query($sql);
-    if($result->num_rows>0){
-        session_start();
-        $row=$result->fetch_assoc();
-        $_SESSION['email']=$row['email'];
-        header("Location: index.html");    /* Change later */
-        exit(); 
+        if ($conn->query($insertQuery) === TRUE) {
+            header("Location: login.php");
+            exit();
+        } else {
+            echo "Error: " . $conn->error;
+        }
     }
-    else{
-        echo "Not found, Incorrect Email or Password";
-    }
-
 }
 ?>
